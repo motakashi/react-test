@@ -27,7 +27,9 @@
     "coverage": "yarn test --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx}' --collectCoverageFrom='!src/components/**/*.{types, stories, constants, test, spec}.{ts,tsx}'",
     "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "eslint --ignore-path .gitignore . --fix",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,css,scss}\""
+    "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,css,scss}\"",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "eslintConfig": {
     "plugins": [
@@ -37,7 +39,8 @@
       "react-app",
       "react-app/jest",
       "plugin:jest-dom/recommended",
-      "eslint-config-prettier"
+      "eslint-config-prettier",
+      "plugin:storybook/recommended"
     ]
   },
   "browserslist": {
@@ -63,9 +66,22 @@
     }
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.3",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-interactions": "^8.4.7",
+    "@storybook/addon-onboarding": "^8.4.7",
+    "@storybook/blocks": "^8.4.7",
+    "@storybook/preset-create-react-app": "^8.4.7",
+    "@storybook/react": "^8.4.7",
+    "@storybook/react-webpack5": "^8.4.7",
+    "@storybook/test": "^8.4.7",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jest-dom": "^4.0.2",
+    "eslint-plugin-storybook": "^0.11.2",
     "msw": "^0.44.2",
-    "prettier": "2.7.1"
+    "prettier": "2.7.1",
+    "prop-types": "^15.8.1",
+    "storybook": "^8.4.7",
+    "webpack": "^5.97.1"
   }
 }
